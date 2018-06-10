@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!--
+      Copyright (c) 2003  Trading Technologies International  
+                  All Rights Reserved Worldwide
+
+        * * *   S T R I C T L Y   P R O P R I E T A R Y   * * *   
+
+The following source code, and the ideas, expressions and concepts
+incorporated therein, as well as the ideas, expressions and concepts
+of any other material (whether tangible or intangible) disclosed in
+conjunction with this source code, are the exclusive and proprietary
+property, and constitutes confidential information, of Trading
+Technologies International.  Accordingly, the user of this source code
+agrees that it shall continue to be bound by the terms and conditions
+of any and all confidentiality agreements executed with Trading 
+Technologies International concerning the disclosure of the source code
+and any other materials in conjunction therewith.
+
+-->
+<!--
+
+    This file contains configuration variable values local to this
+    machine.  See the comments in aconfig.xml for a full description
+    of each variable.
+
+    DO NOT change any information in this file as per published TT
+    documentation or as directed by TT Support.
+
+    This file can be edited automatically by the AConfigUtil GUI.
+
+    Programmer's note: If you make *any* changes to this DTD, you must
+    make corresponding changes to the code that reads it.
+
+-->
+
+<!DOCTYPE agile-config [
+<!ELEMENT agile-config (config-values)>
+    <!ELEMENT config-values (config-value)*>
+        <!ELEMENT config-value (group_values|value)>
+          <!ATTLIST config-value dn ID #REQUIRED>
+            <!ELEMENT group_values (group,value)+>
+                <!ELEMENT group (#PCDATA)> <!--single group name-->
+                <!ELEMENT value (#PCDATA)>
+          
+]>
+
+
+<agile-config>
+<!--                  LOCAL Values              -->
+<!--                  LOCAL Values              -->
+<!--                  LOCAL Values              -->
+
+
+<config-values>
+    <!-- 
+         these values are considered to be from "file" source (by
+         default, one level below "runtime")
+    -->
+
+    <config-value dn="AConfig.Core.LogfileDir">
+        <value>C:\tt\logfiles</value>
+
+    </config-value>
+
+    <config-value dn="AConfig.Core.ConfigDir">
+        <value>C:\tt\config</value>
+
+    </config-value>
+
+    <config-value dn="AConfig.Core.DatfileDir">
+        <value>C:\tt\datfiles</value>
+
+    </config-value>
+
+    <config-value dn="AConfig.Core.AuditfileDir">
+        <value>C:\tt\auditfiles</value>
+
+    </config-value>
+
+    <config-value dn="AConfig.Core.Guard.ConfigDir">
+        <value>C:\tt\guardian\config</value>
+
+    </config-value>
+
+    <config-value dn="AConfig.Core.Guard.Environment">
+        <value>PROD</value>
+
+    </config-value>
+    
+    <config-value dn="AConfig.Core.Guard.Guardian.GatewayFilterSIM">
+        <value><!--empty--></value>
+    </config-value>
+    
+    <config-value dn="AConfig.Core.Guard.Guardian.GatewayFilterPROD">
+        <value><!--empty--></value>
+    </config-value>
+
+	<config-value dn="AConfig.Core.Guard.Thread.Priority">
+		<value>2</value>
+	</config-value>
+	<!--______________________Performance Counter Enable_________________________-->
+
+	<!--GENERAL CONNECTIVITY COUNTERS -->
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.SRV_API_CONN.TotalAPIConnections">
+		<value>OFF</value>
+	</config-value>
+	
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.SRV_API_CONN.MaxAPIConnections">
+		<value>OFF</value>
+	</config-value>
+
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.SRV_API_CONN.APIConnRequests">
+		<value>OFF</value>
+	</config-value>
+	
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.SRV_API_CONN.TotalAPIDisconnects">
+		<value>OFF</value>
+	</config-value>
+	
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.SRV_API_CONN.TotalExchDisconnects">
+		<value>OFF</value>
+	</config-value>
+	
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.SRV.TotalBytesSent">
+		<value>OFF</value>
+	</config-value>
+	
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.SRV.TotalRecsSent">
+		<value>OFF</value>
+	</config-value>
+	
+	<!--ORDER SERVER COUNTERS -->
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.ORDER_SERVER.OrdersTotalRecvd">
+		<value>OFF</value>
+	</config-value>
+	
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.ORDER_SERVER.TotalOrdersQueued">
+		<value>OFF</value>
+	</config-value>
+	
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.ORDER_SERVER.MaxOrderQueueSize">
+		<value>OFF</value>
+	</config-value>
+	
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.ORDER_SERVER.CoreTotalOrdersRej">
+		<value>OFF</value>
+	</config-value>
+	
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.ORDER_SERVER.OrderStsPktSent">
+		<value>OFF</value>
+	</config-value>
+
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.ORDER_SERVER.OrdersDownloaded">
+		<value>OFF</value>
+	</config-value>
+
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.ORDER_SERVER.ActiveOrderDownloads">
+		<value>OFF</value>
+	</config-value>
+
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.ORDER_SERVER.MaxOrderDownloads">
+		<value>OFF</value>
+	</config-value>
+
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.ORDER_SERVER.TotalOrdersWrk">
+		<value>OFF</value>
+	</config-value>
+	
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.ORDER_SERVER.MaxOrdersWrk">
+		<value>OFF</value>
+	</config-value>
+
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.ORDER_SERVER.TotalOrderStsRecvd">
+		<value>OFF</value>
+	</config-value>
+
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.ORDER_SERVER.TotalFillRecsSent">
+		<value>OFF</value>
+	</config-value>
+
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.ORDER_ROUTER.OrdRtrExchDisconnects">
+		<value>OFF</value>
+	</config-value>
+
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.ORDER_ROUTER.TotalOrderLatency">
+		<value>OFF</value>
+	</config-value>
+	
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.ORDER_ROUTER.LastOrderLatency">
+		<value>OFF</value>
+	</config-value>
+
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.ORDER_ROUTER.MaxOrderLatency">
+		<value>OFF</value>
+	</config-value>
+
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.ORDER_ROUTER.MinOrderLatency">
+		<value>OFF</value>
+	</config-value>
+	
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.ORDER_ROUTER.GWTotalOrdersRej">
+		<value>OFF</value>
+	</config-value>
+
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.ORDER_ROUTER.TotalOrdersSent">
+		<value>OFF</value>
+	</config-value>
+	
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.ORDER_ROUTER.TotalExchTransmissionErrors">
+		<value>OFF</value>
+	</config-value>
+
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.ORDER_ROUTER.OrdSrvGWSpecific1">
+		<value>OFF</value>
+	</config-value>
+	
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.ORDER_ROUTER.OrdSrvGWSpecific2">
+		<value>OFF</value>
+	</config-value>
+	
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.ORDER_ROUTER.OrdSrvGWSpecific3">
+		<value>OFF</value>
+	</config-value>
+	
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.ORDER_ROUTER.OrdSrvGWSpecific4">
+		<value>OFF</value>
+	</config-value>
+	
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.ORDER_ROUTER.OrdSrvGWSpecific5">
+		<value>OFF</value>
+	</config-value>
+	
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.ORDER_ROUTER.OrdSrvGWSpecific6">
+		<value>OFF</value>
+	</config-value>
+	
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.ORDER_ROUTER.MaxOrderProcessingTime">
+		<value>OFF</value>
+	</config-value>
+	
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.ORDER_ROUTER.MinOrderProcessingTime">
+		<value>OFF</value>
+	</config-value>
+	
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.ORDER_ROUTER.LastOrderProcessingTime">
+		<value>OFF</value>
+	</config-value>
+	
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.ORDER_ROUTER.TotalOrderProcessingTime">
+		<value>OFF</value>
+	</config-value>
+
+
+	<!--PRICE SERVER COUNTERS -->
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.PRC_SERVER.ProductSubsc">
+		<value>OFF</value>
+	</config-value>
+
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.PRC_SERVER.MarketDepthSubsc">
+		<value>OFF</value>
+	</config-value>
+
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.PRC_SERVER.PrcPktsSent">
+		<value>OFF</value>
+	</config-value>
+
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.PRC_SERVER.MDPktsSent">
+		<value>OFF</value>
+	</config-value>
+
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.PRC_SERVER.MDUpdateSize">
+		<value>OFF</value>
+	</config-value>
+
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.PRC_SERVER.PrcSubjSubsc">
+		<value>OFF</value>
+	</config-value>
+
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.PRC_SERVER.PriceUpdsBeforeCoal">
+		<value>OFF</value>
+	</config-value>
+
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.PRC_SERVER.PriceUpdsAfterCoal">
+		<value>OFF</value>
+	</config-value>
+
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.PRC_SERVER.MDUpdsBeforeCoal">
+		<value>OFF</value>
+	</config-value>
+
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.PRC_SERVER.MDUpdsAfterCoal">
+		<value>OFF</value>
+	</config-value>
+
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.PRC_SERVER.PrcTableRecsDownl">
+		<value>OFF</value>
+	</config-value>
+
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.PRC_SERVER.PrcTableSize">
+		<value>OFF</value>
+	</config-value>
+
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.PRC_SERVER.PrcSrvGWSpecific1">
+		<value>OFF</value>
+	</config-value>
+	
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.PRC_SERVER.PrcSrvGWSpecific2">
+		<value>OFF</value>
+	</config-value>
+	
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.PRC_SERVER.PrcSrvGWSpecific3">
+		<value>OFF</value>
+	</config-value>
+	
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.PRC_SERVER.PrcSrvGWSpecific4">
+		<value>OFF</value>
+	</config-value>
+	
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.PRC_SERVER.PrcSrvGWSpecific5">
+		<value>OFF</value>
+	</config-value>
+	
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.PRC_SERVER.PrcSrvGWSpecific6">
+		<value>OFF</value>
+	</config-value>
+	
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.PRC_SERVER.TotalExchangePacketErrors">
+		<value>OFF</value>
+	</config-value>
+	
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.PRC_SERVER.TotalExchBytesRcvd">
+		<value>OFF</value>
+	</config-value>
+
+
+
+	<!--FILL SERVER COUNTERS-->
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.FILL_SERVER.TotalFillRecords">
+		<value>OFF</value>
+	</config-value>
+
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.FILL_SERVER.FillsDownloaded">
+		<value>OFF</value>
+	</config-value>
+
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.FILL_SERVER.ActiveFillDownloads">
+		<value>OFF</value>
+	</config-value>
+
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.FILL_SERVER.MaxFillDownloads">
+		<value>OFF</value>
+	</config-value>
+
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.FILL_SERVER.TotalTradedVol">
+		<value>OFF</value>
+	</config-value>
+
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.FILL_SERVER.TotalTradedVolTT">
+		<value>OFF</value>
+	</config-value>
+
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.FILL_SERVER.PartialFills">
+		<value>OFF</value>
+	</config-value>
+
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.FILL_SERVER.TotalFillPktsSent">
+		<value>OFF</value>
+	</config-value>
+
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.FILL_SERVER.MaxFillProcessingTime">
+		<value>OFF</value>
+	</config-value>
+	
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.FILL_SERVER.MinFillProcessingTime">
+		<value>OFF</value>
+	</config-value>
+	
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.FILL_SERVER.LastFillProcessingTime">
+		<value>OFF</value>
+	</config-value>
+	
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.FILL_SERVER.TotalFillProcessingTime">
+		<value>OFF</value>
+	</config-value>	
+	
+	
+	<!--API COUNTERS-->
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.API.AcceptOrdersRcvd">
+		<value>OFF</value>
+	</config-value>
+
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.API.AcceptOrdLatency">
+		<value>OFF</value>
+	</config-value>
+
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.API.TotalOrdersRcvd">
+		<value>OFF</value>
+	</config-value>
+
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.API.TotalOrdLatency">
+		<value>OFF</value>
+	</config-value>
+
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.API.TotalFillsRecvd">
+		<value>OFF</value>
+	</config-value>
+
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.API.TotalBytesRcvd">
+		<value>OFF</value>
+	</config-value>
+	
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.API.TotalRecsRecvd">
+		<value>OFF</value>
+	</config-value>
+	
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.API.TotalProdSubsc">
+		<value>OFF</value>
+	</config-value>
+
+	<config-value dn="AConfig.Core.Perf-Counter.Enable.API.TotalMDSubsc">
+		<value>OFF</value>
+	</config-value>
+
+
+	
+</config-values>
+</agile-config>

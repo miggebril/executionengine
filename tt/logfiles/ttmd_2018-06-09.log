@@ -1,0 +1,162 @@
+09.06.2018 20:46:20.638 | ttmd.exe/### | 1588 | INFO | 10118775 | tracingLevel set to TTM_TRACE0
+09.06.2018 20:46:20.657 | ttmd.exe/### | 1588 | INFO | 10119457 | Running TTM daemon.
+09.06.2018 20:46:20.657 | ttmd.exe/### | 1588 | INFO | 10119458 | Version: 7.1.19.1 Win32 PID: 15664
+09.06.2018 20:46:20.657 | ttmd.exe/### | 1588 | INFO | 10119462 | Start time: 06/09/2018 20:46:19.216
+09.06.2018 20:46:20.657 | ttmd.exe/### | 1588 | INFO | 10119463 | Reading configuration parameters from C:\tt\config\ttmd.cfg: 
+09.06.2018 20:46:20.658 | ttmd.exe/### | 1588 | INFO | 10119481 | 
+
+<< General Configuration >>
+Local mode = false        RemoteHostServer = false  High priority = false     
+API ListenPort = 10200    SMQ API ListenPort = 10400Compression = true        
+Encryption = false        MTU = 1480                Drop Rate = 0             
+Drop Rate = 0             Logging Type = File       Tracing Level = normal    
+TTL = 64                  Mcst IFace=192.168.126.1  TCP IFace=All IPs         
+ProxyFtgPort=13001        DiagPort=10700            TCP No Delay = true       
+TCP Wnd Size = auto       Verbose Logging = false   PGMBuffSize = 20971520    
+Arp timeout = 500         Arp refresh = 300000      BaseReachableTime = 3600000
+ArpReachableTime = 4464000MinidumpType = 0          PerfLogging = false       
+ForceDaemonPgmOffload = falseIgnoreSubscription = falseReconnect Timer = 10000   
+DLRQLimit = 8000          OutboundWQLimit = 20000   ClientQLimit = 100000     
+RecvThPoolQLimit = 4000   ProxySMQBrQLimit = 8000   PGMPubQLimit = 4000       
+PGMOutBStrMgrQLimit = 8000RcvSlowCnsmrCutoff = 104857600PGMNakMgrQLimit = 20000   
+NAKLogTimer_sec = 600     MinidumpInterval = 40     MinidumpsPerCycle = 3     
+MinidumpCycles = 3        APEncryption = false      SmoothingIntvl = 0        
+SmoothingSize = 2500      PollingReceiver = false   TrafficShapeRate = 200    
+TrafficShapeScale = 100   TrafficShapeEnabled = true
+SMQ
+DataBankCnt = 10          NumOfQueues = 250         NumOfSE = 200000          
+NumOfBuffers = 20000      SMQBufferSize = 2048      DExpandOnDemand = true    
+AExpandOnDemand = true    PreallocDataBanks = 5     RcvrCacheThrshld= 50000   
+Proxy
+DataBankCnt = 10          NumOfQueues = 200         NumOfSE = 20000           
+NumOfBuffers = 10000      ExpandPoolOnDemand = true 
+XTRH
+DataBankCnt = 10          NumOfQueues = 200         NumOfSE = 260000          
+NumOfBuffers = 10000      ExpandPoolOnDemand = true 
+
+<< PGM Configuration >>
+TXWSecs = 15              TXWAdvSecs = 3            AdvIvl = 3000             
+SpmIvl = 5000             SpmIhbMin = 5000          SpmIhbMax = 64000         
+NakRptIvl = 1000          NakRbIvl = 500            NakRDataIvl = 1000        
+NakGenIvl = 10000         NakNcfRetries = 3         NakDataRetries = 3        
+InStreamTimeout= 20       DLRSignalThreshold = 20   RecStartStrmPackets = 15  
+
+<< Multicast Configuration >>
+The following multicast groups are used:
+239.255.3.10 for ">"    
+09.06.2018 20:46:20.658 | ttmd.exe/### | 1588 | INFO | 10119481 | 
+
+09.06.2018 20:46:20.762 | ttmd.exe/### | 1588 | WARNING | 10119479 | Base Filtering Engine detected, no PGM traffic will be received by TTMD.
+09.06.2018 20:46:20.810 | ttmd.exe/### | 7900 | INFO | 10118606 | Successfully Connected to IPC Pool with name TTM_IPC_Pool_23660 and 1 data bank(s) in 47912 us; SMQApiVersion=0x2040100 SMQMemoryVersion=0x2040100 Size=45787328
+09.06.2018 20:46:20.838 | ttmd.exe/### | 7900 | INFO | 10118619 | Successfully created data bank 1 in pool TTM_IPC_Pool_23660 in 27071 us
+09.06.2018 20:46:20.860 | ttmd.exe/### | 7900 | INFO | 10118619 | Successfully created data bank 2 in pool TTM_IPC_Pool_23660 in 22437 us
+09.06.2018 20:46:20.882 | ttmd.exe/### | 7900 | INFO | 10118619 | Successfully created data bank 3 in pool TTM_IPC_Pool_23660 in 22240 us
+09.06.2018 20:46:20.906 | ttmd.exe/### | 7900 | INFO | 10118619 | Successfully created data bank 4 in pool TTM_IPC_Pool_23660 in 23366 us
+09.06.2018 20:46:20.926 | ttmd.exe/### | 7900 | INFO | 10118934 | RemoteHostManager heap pool: DB: 10, QC: 200, SE: 260000, BC: 10000, BS: 500, Exp: true
+09.06.2018 20:46:20.927 | ttmd.exe/### | 7900 | INFO | 10021000 | pulse_io is using the ioport dispatcher
+09.06.2018 20:46:20.927 | ttmd.exe/### | 7900 | INFO | 10021000 | SO_REUSEADDR is 0
+09.06.2018 20:46:20.927 | ttmd.exe/### | 7900 | INFO | 10021000 | SO_RCVBUF is 65536
+09.06.2018 20:46:20.927 | ttmd.exe/### | 7900 | INFO | 10021000 | SO_SNDBUF is 65536
+09.06.2018 20:46:20.927 | ttmd.exe/### | 7900 | INFO | 10021000 | IP_TTL is 128
+09.06.2018 20:46:20.927 | ttmd.exe/### | 7900 | INFO | 10021000 | SO_OOBINLINE is 0
+09.06.2018 20:46:20.927 | ttmd.exe/### | 7900 | INFO | 10021000 | TCP_NODELAY is 1
+09.06.2018 20:46:20.927 | ttmd.exe/### | 7900 | INFO | 10021000 | SO_LINGER is on=1 linger=1
+09.06.2018 20:46:20.927 | ttmd.exe/### | 7900 | INFO | 10021000 | TCPServer [tcp,1204] listening at *:10200
+09.06.2018 20:46:20.930 | ttmd.exe/### | 7900 | INFO | 10118899 | ProxyManager heap pool: DB: 10, QC: 200, SE: 20000, BC: 10000, BS: 500, Exp: true
+09.06.2018 20:46:20.930 | ttmd.exe/### | 7900 | INFO | 10021000 | pulse_io is using the ioport dispatcher
+09.06.2018 20:46:22.957 | ttmd.exe/### | 14964 | INFO | 10119496 | SMQ Client successfully connected to the daemon; connection=0x1052a788
+09.06.2018 20:46:22.960 | ttmd.exe/### | 14964 | INFO | 10119576 | SMQ Client connection=0x1052a788, Name=tt_install_manager, pid=16892
+09.06.2018 20:47:20.913 | ttmd.exe/### | 15596 | INFO | 10119585 | 
+SMQ: cDB:5 lDB:5 Sz:230216640 B:100000 SE:1180000 Q:1250 fB:99976 fSE:~30331 fQ:1188
+RMH: cDB:1 lDB:1 Sz:10101888 B:10000 SE:270000 Q:200 fB:10000 fSE:~260000 fQ:194
+MEM: VT:10462 VU:8003 VTTM:25 PT:8097 PU:6129 PTTM:249
+PGM 8900: PS:10/10 PR:0/0 IRS:0 IUS:0 ORS:2 OUS:0 SU:5 TBPS:0.000
+PGM 8900: TX ODATA:2 SPM:8 NCF:0 RDATA:0 NAK:0 TDP/WLBK:0/0 MPS:2[0.003] MBS:0.003[2]
+PGM 8900: RX ODATA:0 SPM:0 NCF:0 RDATA:0 NAK:0 RDP:0 UNREC:0 MPR:0[0.000] MBR:0.000[0] OSD:0 UDD:0
+IPC 8900: PS:1/214 PR:0/0 MPS:1[0.002] MBS:0.002[1] MPR:0[0.000] MBR:0.000[0]
+Remote Host TCP 8900: PS:0 PR:0 PD:0 MPS:0[0.000] MBS:0.000[0] MPR:0[0.000] MBR:0.000[0] CC:0 
+Proxy TCP 8900: PS:0 PR:0 PD:0 MPS:0[0.000] MBS:0.000[0] MPR:0[0.000] MBR:0.000[0]  
+
+09.06.2018 20:47:20.963 | ttmd.exe/### | 16928 | INFO | 10118737 | PGM receive socket 192.168.126.1: max pending bytes in last minute: 0
+09.06.2018 20:47:35.868 | ttmd.exe/### | 14964 | INFO | 10119497 | SMQ Client connection=0x1052a788 from PID=16892 disconnected; code=2, string='End of file'
+09.06.2018 20:52:38.551 | ttmd.exe/### | 1728 | INFO | 10118775 | tracingLevel set to TTM_TRACE0
+09.06.2018 20:52:38.554 | ttmd.exe/### | 1728 | INFO | 10119457 | Running TTM daemon.
+09.06.2018 20:52:38.554 | ttmd.exe/### | 1728 | INFO | 10119458 | Version: 7.1.19.1 Win32 PID: 12128
+09.06.2018 20:52:38.554 | ttmd.exe/### | 1728 | INFO | 10119462 | Start time: 06/09/2018 20:52:38.448
+09.06.2018 20:52:38.554 | ttmd.exe/### | 1728 | INFO | 10119463 | Reading configuration parameters from C:\tt\config\ttmd.cfg: 
+09.06.2018 20:52:38.554 | ttmd.exe/### | 1728 | INFO | 10119481 | 
+
+<< General Configuration >>
+Local mode = false        RemoteHostServer = false  High priority = false     
+API ListenPort = 10200    SMQ API ListenPort = 10400Compression = true        
+Encryption = false        MTU = 1480                Drop Rate = 0             
+Drop Rate = 0             Logging Type = File       Tracing Level = normal    
+TTL = 64                  Mcst IFace=192.168.126.1  TCP IFace=All IPs         
+ProxyFtgPort=13001        DiagPort=10700            TCP No Delay = true       
+TCP Wnd Size = auto       Verbose Logging = false   PGMBuffSize = 20971520    
+Arp timeout = 500         Arp refresh = 300000      BaseReachableTime = 3600000
+ArpReachableTime = 3384000MinidumpType = 0          PerfLogging = false       
+ForceDaemonPgmOffload = falseIgnoreSubscription = falseReconnect Timer = 10000   
+DLRQLimit = 8000          OutboundWQLimit = 20000   ClientQLimit = 100000     
+RecvThPoolQLimit = 4000   ProxySMQBrQLimit = 8000   PGMPubQLimit = 4000       
+PGMOutBStrMgrQLimit = 8000RcvSlowCnsmrCutoff = 104857600PGMNakMgrQLimit = 20000   
+NAKLogTimer_sec = 600     MinidumpInterval = 40     MinidumpsPerCycle = 3     
+MinidumpCycles = 3        APEncryption = false      SmoothingIntvl = 0        
+SmoothingSize = 2500      PollingReceiver = false   TrafficShapeRate = 200    
+TrafficShapeScale = 100   TrafficShapeEnabled = true
+SMQ
+DataBankCnt = 10          NumOfQueues = 250         NumOfSE = 200000          
+NumOfBuffers = 20000      SMQBufferSize = 2048      DExpandOnDemand = true    
+AExpandOnDemand = true    PreallocDataBanks = 5     RcvrCacheThrshld= 50000   
+Proxy
+DataBankCnt = 10          NumOfQueues = 200         NumOfSE = 20000           
+NumOfBuffers = 10000      ExpandPoolOnDemand = true 
+XTRH
+DataBankCnt = 10          NumOfQueues = 200         NumOfSE = 260000          
+NumOfBuffers = 10000      ExpandPoolOnDemand = true 
+
+<< PGM Configuration >>
+TXWSecs = 15              TXWAdvSecs = 3            AdvIvl = 3000             
+SpmIvl = 5000             SpmIhbMin = 5000          SpmIhbMax = 64000         
+NakRptIvl = 1000          NakRbIvl = 500            NakRDataIvl = 1000        
+NakGenIvl = 10000         NakNcfRetries = 3         NakDataRetries = 3        
+InStreamTimeout= 20       DLRSignalThreshold = 20   RecStartStrmPackets = 15  
+
+<< Multicast Configuration >>
+The following multicast groups are used:
+239.255.3.10 for ">"    
+09.06.2018 20:52:38.555 | ttmd.exe/### | 1728 | INFO | 10119481 | 
+
+09.06.2018 20:52:38.556 | ttmd.exe/### | 1728 | WARNING | 10119479 | Base Filtering Engine detected, no PGM traffic will be received by TTMD.
+09.06.2018 20:52:38.576 | ttmd.exe/### | 16416 | INFO | 10118606 | Successfully Connected to IPC Pool with name TTM_IPC_Pool_24898 and 1 data bank(s) in 19616 us; SMQApiVersion=0x2040100 SMQMemoryVersion=0x2040100 Size=45787328
+09.06.2018 20:52:38.806 | ttmd.exe/### | 16416 | INFO | 10118619 | Successfully created data bank 1 in pool TTM_IPC_Pool_24898 in 229718 us
+09.06.2018 20:52:39.050 | ttmd.exe/### | 16416 | INFO | 10118619 | Successfully created data bank 2 in pool TTM_IPC_Pool_24898 in 244975 us
+09.06.2018 20:52:39.280 | ttmd.exe/### | 16416 | INFO | 10118619 | Successfully created data bank 3 in pool TTM_IPC_Pool_24898 in 229091 us
+09.06.2018 20:52:39.491 | ttmd.exe/### | 16416 | INFO | 10118619 | Successfully created data bank 4 in pool TTM_IPC_Pool_24898 in 211296 us
+09.06.2018 20:52:39.510 | ttmd.exe/### | 16416 | INFO | 10118934 | RemoteHostManager heap pool: DB: 10, QC: 200, SE: 260000, BC: 10000, BS: 500, Exp: true
+09.06.2018 20:52:39.511 | ttmd.exe/### | 16416 | INFO | 10021000 | pulse_io is using the ioport dispatcher
+09.06.2018 20:52:39.511 | ttmd.exe/### | 16416 | INFO | 10021000 | SO_REUSEADDR is 0
+09.06.2018 20:52:39.511 | ttmd.exe/### | 16416 | INFO | 10021000 | SO_RCVBUF is 65536
+09.06.2018 20:52:39.511 | ttmd.exe/### | 16416 | INFO | 10021000 | SO_SNDBUF is 65536
+09.06.2018 20:52:39.511 | ttmd.exe/### | 16416 | INFO | 10021000 | IP_TTL is 128
+09.06.2018 20:52:39.511 | ttmd.exe/### | 16416 | INFO | 10021000 | SO_OOBINLINE is 0
+09.06.2018 20:52:39.511 | ttmd.exe/### | 16416 | INFO | 10021000 | TCP_NODELAY is 1
+09.06.2018 20:52:39.511 | ttmd.exe/### | 16416 | INFO | 10021000 | SO_LINGER is on=1 linger=1
+09.06.2018 20:52:39.512 | ttmd.exe/### | 16416 | INFO | 10021000 | TCPServer [tcp,1208] listening at *:10200
+09.06.2018 20:52:39.514 | ttmd.exe/### | 16416 | INFO | 10118899 | ProxyManager heap pool: DB: 10, QC: 200, SE: 20000, BC: 10000, BS: 500, Exp: true
+09.06.2018 20:52:39.514 | ttmd.exe/### | 16416 | INFO | 10021000 | pulse_io is using the ioport dispatcher
+09.06.2018 20:52:41.373 | ttmd.exe/### | 10844 | INFO | 10119496 | SMQ Client successfully connected to the daemon; connection=0x102a4660
+09.06.2018 20:52:41.377 | ttmd.exe/### | 10844 | INFO | 10119576 | SMQ Client connection=0x102a4660, Name=tt_install_manager, pid=16660
+09.06.2018 20:53:39.498 | ttmd.exe/### | 15160 | INFO | 10119585 | 
+SMQ: cDB:5 lDB:5 Sz:230216640 B:100000 SE:1180000 Q:1250 fB:99976 fSE:~30331 fQ:1188
+RMH: cDB:1 lDB:1 Sz:10101888 B:10000 SE:270000 Q:200 fB:10000 fSE:~260000 fQ:194
+MEM: VT:10462 VU:8129 VTTM:25 PT:8097 PU:6192 PTTM:249
+PGM 8900: PS:10/10 PR:0/0 IRS:0 IUS:0 ORS:2 OUS:0 SU:5 TBPS:0.000
+PGM 8900: TX ODATA:2 SPM:8 NCF:0 RDATA:0 NAK:0 TDP/WLBK:0/0 MPS:2[0.003] MBS:0.003[2]
+PGM 8900: RX ODATA:0 SPM:0 NCF:0 RDATA:0 NAK:0 RDP:0 UNREC:0 MPR:0[0.000] MBR:0.000[0] OSD:0 UDD:0
+IPC 8900: PS:1/214 PR:0/0 MPS:1[0.002] MBS:0.002[1] MPR:0[0.000] MBR:0.000[0]
+Remote Host TCP 8900: PS:0 PR:0 PD:0 MPS:0[0.000] MBS:0.000[0] MPR:0[0.000] MBR:0.000[0] CC:0 
+Proxy TCP 8900: PS:0 PR:0 PD:0 MPS:0[0.000] MBS:0.000[0] MPR:0[0.000] MBR:0.000[0]  
+
+09.06.2018 20:53:39.534 | ttmd.exe/### | 7528 | INFO | 10118737 | PGM receive socket 192.168.126.1: max pending bytes in last minute: 0
+09.06.2018 20:53:43.210 | ttmd.exe/### | 10844 | INFO | 10119497 | SMQ Client connection=0x102a4660 from PID=16660 disconnected; code=2, string='End of file'

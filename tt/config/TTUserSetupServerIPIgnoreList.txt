@@ -1,0 +1,3 @@
+# This file contains a list of IPs that the TTUS server should ignore.
+# This file should be modified on each TTUS server in an environment.
+# IPs should be listed below, one per line.

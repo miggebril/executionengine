@@ -1,0 +1,161 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; This is the configuration file for TTUserSetupServer.exe
+;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; Master=1 for a master User Setup Server
+;; Master=0 for a slave User Setup Server
+;;
+;; There should be one-and-only-one master, otherwise, some functions.
+;; will be disabled.
+;;
+;; Be careful when you set this setting to 0, for slave, because slave
+;; servers overlay their databases with the data from the master.
+;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Master=0
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; The SQL used by the User Setup Server comes from this file.
+;; 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+SqlStatementsFile=C:\tt\tt_user_setup\us70_sql_statements.sql
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; The full path to the access database.   This should be a on local 
+;; drive. You should be backing up this file at least daily.
+;; 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+AccessFileFullPath=C:\tt\datfiles\us70_user_setup_db.mdb
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; Switches to turn on/off additional logging
+;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+LogSql=0
+LogIncomingMessagesVerbose=0
+LogOutgoingMessagesVerbose=0
+
+; Log who is doing what to the db in "UserSetupDbUpdates_TODAY.log"
+LogDbUpdates=1
+
+; Log login attempts in seperate files, "UserSetupLoginAttempts_TODAY.log" 
+LogLoginAttempts=1
+
+; Log major events in Windows Event viewer.  This logs what you see in 
+; the client Info window into the MS Windows
+; Event Viewer also.
+LogMajorEventsInEventViewer=1
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; This setting controls whether or not the adminstrator/user of the 
+;; client application TTUserSetup.exe can type in passwords or not.  If
+;; it's set to 0, then the administrator can type in passwords.  If it
+;; is set to 1, then the administrator can only request the application
+;; to generate and email passwords.
+;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+ForbidPasswordEntry=0
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; When a slave server starts, it gets a copy of the database from the
+;; master server.  If you set "RestrictSlaveServerIPs" to 1, then
+;; the master server will reject the request for the copy from slaves
+;; that aren't in the comma delimited list of allowed IP addresses.
+;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+RestrictSlaveServerIPs=0
+
+;; If the above setting is 1, then supply a list of allowed slave IPs 
+;; delimited by commas, like this:
+;;AllowedSlaveServerIPs=127.0.0.1,127.0.0.2
+AllowedSlaveServerIPs=
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; When "MakeConcurrentLoginsReadOnly" is set to 0, Administrators that 
+;; can access the TT User Setup Client are able to limit the number of 
+;; concurrent logins that are allowed per user. 
+;;
+;; When "MakeConcurrentLoginsReadOnly" is set to 1, access to the 
+;; concurrent logins functionality in the client will be limited to 
+;; "read only,” meaning that that the only way to manipulate these 
+;; settings is by directly modifying the database. And, for all new 
+;; users, concurrent logins will be limited to n, where n is defined by 
+;; the DefaultMaxConcurrentLogins entry below.  
+;; 
+;; If you are setting MakeConcurrentLoginsReadOnly to 1, you may also 
+;; want to use the TT User Setup Utility to run the database script 
+;; called "us70_allow_just_1_concurrent_login.sql". This script will 
+;; update the database so that all users are limited to just 1 login. 
+;; You can edit the script if you want to limit all users to something 
+;; other than 1.
+;;
+;; After running this script, you can manually modify individual users 
+;; in the tt_user table so that they are allowed more than one 
+;; concurrent login. 
+;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+MakeConcurrentLoginsReadOnly=0
+DefaultMaxConcurrentLogins=1
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; When turned on, among other things, product limits will no longer  
+;; have to be published to Guardian. For more on this feature, please  
+;; administrator to create more product limits per trader, without limit 
+;; reference the TT User Setup System Administration Manual.
+;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+DisableProductLimitPublishing=1
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; The "PreSharedKey" is a password that you make up. Put the same
+;; same PreSharedKey in all the server TTUserSetupServer.ini files.
+;; You should keep the PreSharedKey secret so that unauthorized
+;; people cannot start their own slave server and thereby obtain a copy
+;; of your database.
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+PreSharedKey=
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; Client Throttling Parameters
+;;
+;; MaxInFlightClientThrottle - Maximum number of concurrent outbound
+;;     requests to the server
+;; SendDelayClientThrottle - Delay in MS between bunches of requests
+;; TimeoutClientThrottle - Maximum amount of time in MS that a client
+;;     will wait for a request to be serviced before timing it out.
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+MaxInFlightClientThrottle=40
+SendDelayClientThrottle=20
+TimeoutClientThrottle=20000

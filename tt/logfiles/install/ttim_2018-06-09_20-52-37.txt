@@ -1,0 +1,57 @@
+2018-06-09 20:52:38.1194|INFO |DefaultUsername|1|Existing username not found in registry. Using 
+2018-06-09 20:52:38.1194|DEBUG|TheViewModel   |1|Set Username = 
+2018-06-09 20:52:38.1194|DEBUG|TheViewModel   |1|Set SelectedProduct = [, ]
+2018-06-09 20:52:38.1344|DEBUG|TheViewModel   |1|Set Error = False
+2018-06-09 20:52:38.1344|DEBUG|TheViewModel   |1|Set Error = False
+2018-06-09 20:52:38.1344|DEBUG|TheViewModel   |1|Set ErrorMessage = 
+2018-06-09 20:52:38.1344|DEBUG|TheViewModel   |1|Set Busy = 
+2018-06-09 20:52:38.1344|DEBUG|TheViewModel   |1|Set Busy = False
+2018-06-09 20:52:38.1344|DEBUG|TheViewModel   |1|Set CurrentStep = TradingTechnologies.Deployment.FirstTimeLauncher.Steps.GetUsername
+2018-06-09 20:52:38.1344|DEBUG|TheViewModel   |1|Set DownloadProgressControl = null
+2018-06-09 20:52:38.1344|DEBUG|TheViewModel   |1|Set DownloadInProgress = False
+2018-06-09 20:52:38.1344|INFO |TheViewModel   |1|ConnectToEnvironment
+2018-06-09 20:52:38.1344|DEBUG|TheViewModel   |1|Set Busy = True
+2018-06-09 20:52:38.1506|DEBUG|TheViewModel   |1|Set Busy = Connecting to TT User Setup...
+2018-06-09 20:52:38.1676|DEBUG|TheViewModel   |3|ConnectToEnvironment start
+2018-06-09 20:52:38.1676|DEBUG|TheViewModel   |3|ConnectToEnvironment task init env
+2018-06-09 20:52:38.1676|DEBUG|EnvironmentInitializer|3|EnvironmentInitializer Initialize
+2018-06-09 20:52:38.1676|DEBUG|TtmInitializer |3|TtmInitializer Initialize
+2018-06-09 20:52:38.1856|WARN |TtmInitializer |3|No TTM found running. Trying to start our own.
+2018-06-09 20:52:38.1856|INFO |TtmInitializer |3|TT Update Service process found. Using service to launch TTM.
+2018-06-09 20:52:38.4144|INFO |TtmInitializer |3|Sleeping for 2500ms
+2018-06-09 20:52:41.3832|INFO |CoreInitializer|3|Initializing core took 00:00:00.4138002
+2018-06-09 20:52:41.3842|DEBUG|TheViewModel   |3|ConnectToEnvironment create TtusConnector
+2018-06-09 20:52:41.3842|DEBUG|TheViewModel   |3|ConnectToEnvironment verify tt update support
+2018-06-09 20:52:41.4002|INFO |TtusConnection |3|TtusConnection SendSync
+2018-06-09 20:52:41.4002|DEBUG|TtusConnection |3|TtusConnection Start
+2018-06-09 20:52:42.4448|DEBUG|TtusConnection |3|TtusConnection Started
+2018-06-09 20:52:42.4488|INFO |TtusConnection |3|My inbox: _INBOX.C0A87E01.4D63.4d64
+2018-06-09 20:52:42.4637|INFO |TtusConnection |3|Sending Id: 2
+2018-06-09 20:52:42.4637|INFO |TtusConnection |3|SendSync waiting 00:00:30
+2018-06-09 20:53:12.4701|INFO |TtusConnection |3|SendSync no response received
+2018-06-09 20:53:12.4701|DEBUG|TheViewModel   |1|Set Busy = 
+2018-06-09 20:53:12.4701|DEBUG|TheViewModel   |1|Set Busy = False
+2018-06-09 20:53:12.4791|ERROR|TheViewModel   |1|Exception in ConnectToEnvironment: System.TimeoutException: No response from TT User Setup
+   at TradingTechnologies.Deployment.Connections.Ttus.TtusConnection.SendSync(String inbox, String subject, DataTableMsgNet message)
+   at TradingTechnologies.Deployment.Connections.Ttus.TtusConnection.GetLoginServers()
+   at TradingTechnologies.Deployment.Connections.Ttus.TtusConnection.Initialize()
+   at TradingTechnologies.Deployment.Connections.Ttus.TtusConnection.SendSync(DataTableMsgNet message)
+   at TradingTechnologies.Deployment.Connectors.TtusConnector.VerifyTtupdateSupport()
+   at TradingTechnologies.Deployment.FirstTimeLauncher.TheViewModel.<ConnectToEnvironment>b__0()
+   at TradingTechnologies.Deployment.ExtensionMethods.ExtensionMethods.<>c__DisplayClass6.<StartNew>b__5()
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+2018-06-09 20:53:12.4791|DEBUG|TheViewModel   |1|Set Error = True
+2018-06-09 20:53:12.4791|DEBUG|TheViewModel   |1|Set ErrorMessage = No response from TT User Setup
+2018-06-09 20:53:43.1995|DEBUG|TheViewModel   |1|TheViewModel Exit
+2018-06-09 20:53:43.1995|DEBUG|TheViewModel   |1|Cancelling tasks!
+2018-06-09 20:53:43.1995|DEBUG|TheViewModel   |1|TheViewModel Disposing TtusConnector
+2018-06-09 20:53:43.1995|DEBUG|TtusConnector  |1|TtusConnector Dispose
+2018-06-09 20:53:43.1995|DEBUG|TtusConnection |1|TtusConnection Dispose
+2018-06-09 20:53:43.1995|DEBUG|TtusConnection |1|DataTableMsgNetManager was started, so Stop it.
+2018-06-09 20:53:43.2145|DEBUG|TtusConnection |1|TtusConnection Dispose Exiting
+2018-06-09 20:53:43.2145|DEBUG|TtusConnector  |1|TtusConnector Exiting
+2018-06-09 20:53:43.2145|DEBUG|EnvironmentInitializer|1|EnvironmentInitializer Deinitialize
+2018-06-09 20:53:43.2145|DEBUG|TtmInitializer |1|TtmInitializer Deinitialize
+2018-06-09 20:53:43.2145|INFO |TtmInitializer |1|TT Update Service process found. Using service to stop TTM.
+2018-06-09 20:53:43.2145|INFO |TtmInitializer |1|Stopping the TTM process we started with PID = 12128
