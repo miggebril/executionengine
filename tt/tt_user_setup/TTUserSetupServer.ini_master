@@ -17,7 +17,7 @@
 ;; servers overlay their databases with the data from the master.
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-Master=0
+Master=1
 
 
 
@@ -120,7 +120,7 @@ AllowedSlaveServerIPs=
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 MakeConcurrentLoginsReadOnly=0
-DefaultMaxConcurrentLogins=1
+DefaultMaxConcurrentLogins=0
 
 
 
@@ -143,7 +143,7 @@ DisableProductLimitPublishing=1
 ;; people cannot start their own slave server and thereby obtain a copy
 ;; of your database.
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-PreSharedKey=
+PreSharedKey=maximum2
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
